@@ -3,9 +3,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Book List Table View Controller-->
+        <!--Book List-->
         <scene sceneID="oya-2U-yck">
             <objects>
                 <tableViewController id="iBe-oq-Lzc" customClass="BookListTableViewController" customModule="Intro18" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,6 +31,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="dlH-mO-JRc" kind="show" id="9Mt-sB-Vvo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,11 +41,57 @@
                             <outlet property="delegate" destination="iBe-oq-Lzc" id="xf6-eF-yHw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8V2-Ku-6bI"/>
+                    <navigationItem key="navigationItem" title="Book List" id="8V2-Ku-6bI"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJY-uj-gaj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1254" y="390"/>
+        </scene>
+        <!--Book Detail View Controller-->
+        <scene sceneID="lWF-YS-X1N">
+            <objects>
+                <viewController id="dlH-mO-JRc" customClass="BookDetailViewController" customModule="Intro18" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0QV-gx-D4a"/>
+                        <viewControllerLayoutGuide type="bottom" id="hvo-7M-tRL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Rq-PH-mln">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEU-bh-Gjz">
+                                <rect key="frame" x="20" y="84" width="560" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Za-Nu-raY">
+                                <rect key="frame" x="20" y="133" width="560" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UEU-bh-Gjz" secondAttribute="trailing" id="MOY-Wy-jEl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Za-Nu-raY" secondAttribute="trailing" id="T61-f3-NAt"/>
+                            <constraint firstItem="hvo-7M-tRL" firstAttribute="top" secondItem="2Za-Nu-raY" secondAttribute="bottom" id="dM2-8f-FhH"/>
+                            <constraint firstItem="UEU-bh-Gjz" firstAttribute="leading" secondItem="8Rq-PH-mln" secondAttribute="leadingMargin" id="eO8-yS-0Q7"/>
+                            <constraint firstItem="UEU-bh-Gjz" firstAttribute="top" secondItem="0QV-gx-D4a" secondAttribute="bottom" constant="20" id="mCV-gH-5ox"/>
+                            <constraint firstItem="2Za-Nu-raY" firstAttribute="top" secondItem="UEU-bh-Gjz" secondAttribute="bottom" constant="20" id="tMp-Df-eFh"/>
+                            <constraint firstItem="2Za-Nu-raY" firstAttribute="leading" secondItem="8Rq-PH-mln" secondAttribute="leadingMargin" id="wKu-Zt-NTf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bookDetailSummary" destination="2Za-Nu-raY" id="SUC-oa-z0m"/>
+                        <outlet property="bookDetailTitle" destination="UEU-bh-Gjz" id="Tr8-ag-w2q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZK-7o-e3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2006" y="390"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yWB-gE-X65">

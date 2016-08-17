@@ -14,6 +14,7 @@
 		203341B71D5C93E70012D6A7 /* Intro18Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203341B61D5C93E70012D6A7 /* Intro18Tests.swift */; };
 		203341C21D5C96470012D6A7 /* BookListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203341C11D5C96470012D6A7 /* BookListTableViewController.swift */; };
 		203341C41D5C974D0012D6A7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203341C31D5C974D0012D6A7 /* Book.swift */; };
+		203341C81D5CA7150012D6A7 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203341C71D5CA7150012D6A7 /* BookDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		203341B81D5C93E70012D6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		203341C11D5C96470012D6A7 /* BookListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListTableViewController.swift; sourceTree = "<group>"; };
 		203341C31D5C974D0012D6A7 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		203341C71D5CA7150012D6A7 /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				203341A11D5C93E70012D6A7 /* AppDelegate.swift */,
 				203341A51D5C93E70012D6A7 /* Main.storyboard */,
+				203341C71D5CA7150012D6A7 /* BookDetailViewController.swift */,
 				203341C11D5C96470012D6A7 /* BookListTableViewController.swift */,
 				203341C31D5C974D0012D6A7 /* Book.swift */,
 				203341A81D5C93E70012D6A7 /* Assets.xcassets */,
@@ -203,6 +206,7 @@
 			files = (
 				203341C21D5C96470012D6A7 /* BookListTableViewController.swift in Sources */,
 				203341A21D5C93E70012D6A7 /* AppDelegate.swift in Sources */,
+				203341C81D5CA7150012D6A7 /* BookDetailViewController.swift in Sources */,
 				203341C41D5C974D0012D6A7 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +401,7 @@
 				203341BD1D5C93E70012D6A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		203341BE1D5C93E70012D6A7 /* Build configuration list for PBXNativeTarget "Intro18Tests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +410,7 @@
 				203341C01D5C93E70012D6A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

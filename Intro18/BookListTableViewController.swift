@@ -102,14 +102,23 @@ class BookListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
+        let showBookDetailViewController = segue.destinationViewController as! BookDetailViewController
+        
         // Pass the selected object to the new view controller.
+        if let selectedCell = sender as? UITableViewCell {
+            
+            let selectedIndexPath = tableView.indexPathForCell(selectedCell)!
+            let selectedBook = bookList[selectedIndexPath.row]
+            showBookDetailViewController.detailBook = selectedBook
+        }
+        
     }
-    */
+    
 
 }
