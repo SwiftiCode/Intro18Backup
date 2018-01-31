@@ -44,19 +44,19 @@ class BookListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return bookList.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("BookListCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookListCell", for: indexPath)
 
         // Configure the cell...
         let myBook = bookList[indexPath.row]
@@ -106,14 +106,14 @@ class BookListTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
-        let showBookDetailViewController = segue.destinationViewController as! BookDetailViewController
+        let showBookDetailViewController = segue.destination as! BookDetailViewController
         
         // Pass the selected object to the new view controller.
         if let selectedCell = sender as? UITableViewCell {
             
-            let selectedIndexPath = tableView.indexPathForCell(selectedCell)!
+            let selectedIndexPath = tableView.indexPath(for: selectedCell)!
             let selectedBook = bookList[selectedIndexPath.row]
             showBookDetailViewController.detailBook = selectedBook
         }
